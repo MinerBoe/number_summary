@@ -47,11 +47,11 @@ end
 def mode(list)
 	var = []
 	occurences = []
+	max = 0
 
 	list.each_with_index do |value, i|
 		occurences.push(list.count(value))
 		var.push(i)
 	end
-
-
+	if occurences > 
 end
