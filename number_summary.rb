@@ -44,3 +44,14 @@ def standard_deviation(list)
 		return deviation
 end
 
+def mode(list)
+	var = []
+	occurences = []
+
+	list.each_with_index do |value, i|
+		occurences.push(list.count(value))
+		var.push(i)
+	end
+
+
+end
