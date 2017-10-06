@@ -31,7 +31,7 @@ describe 'number_summary' do
 
 	describe 'mode' do
 		it 'one value is the most often' do
-			mode([1, 2, 3, 4, 4]).must_equal(4)
+			mode([1, 2, 3, 4, 4]).must_equal([4])
 		end
 		it 'multiple values are the most often' do
 			mode([1, 2, 2, 5, 5]).must_equal([2, 5])
