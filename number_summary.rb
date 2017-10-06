@@ -24,7 +24,7 @@ def median(list)
 		return avg_value
 	end
 
-	if length % 2 != 0 
+	if length % 2 != 0
 		# odd length
 		middle = (length + 1) / 2
 		return list[middle-1]
@@ -45,13 +45,33 @@ def standard_deviation(list)
 end
 
 def mode(list)
-	var = []
 	occurences = []
 	max = 0
 
 	list.each_with_index do |value, i|
 		occurences.push(list.count(value))
-		var.push(i)
 	end
-	if occurences > 
+
+	max_occurences = 0
+	max_i = []
+
+	occurences.each do |occurence|
+		if occurence > max_occurences
+			max_occurences = occurence
+		end
+	end
+
+	values = []
+	occurences.each_with_index do |occurence, i|
+		if occurence == max_occurences
+			if values.include?(list[i])
+				
+			else
+				values.push(list[i])
+			end
+		end
+	end
+
+	return values
+
 end
