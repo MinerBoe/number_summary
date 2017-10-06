@@ -29,7 +29,18 @@ def median(list)
 		middle = (length + 1) / 2
 		return list[middle-1]
 	end
-
-
-
 end
+
+def standard_deviation(list)
+		mean = mean(list) # mean is correct
+		array = []
+		list.each do |value|
+			number = (value-mean + 0.0)
+			number = number * number
+			array.push(number)
+		end
+		mean = mean(array)
+		deviation = Math.sqrt(mean)
+		return deviation
+end
+
