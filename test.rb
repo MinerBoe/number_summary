@@ -22,4 +22,11 @@ describe 'number_summary' do
 			median([10, 15, 15, 20]).must_equal(15)
 		end
 	end
+
+	describe 'standard_deviation' do
+		it 'deviation should equal about 1.87' do
+			standard_deviation([6, 2, 3, 1]).must_equal(1.87)
+		end
+	end
+
 end
